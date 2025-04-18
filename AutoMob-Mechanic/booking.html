@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking - AutoMob-Mechanic</title>
+</head>
+<body style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+    <h1>Book a Service</h1>
+    <form action="booking-success.html" method="get">
+        <label>Name: <input type="text" required></label><br>
+        <label>Car Model: <input type="text" required></label><br>
+        <label>Service Type: 
+            <select required>
+                <option value="">Select</option>
+                <option value="preventive">Preventive Maintenance</option>
+                <option value="body">Body Repair</option>
+                <option value="care">Car Care</option>
+            </select>
+        </label><br>
+        <label>Date: <input type="date" required></label><br>
+        <button  style="width: fit-content;" type="submit">Book Now</button>
+    </form>
+</body>
+</html>
