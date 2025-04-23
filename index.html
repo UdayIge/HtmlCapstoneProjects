@@ -3,20 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Html Capstone Projects</title>
     <style>
-        .body{
-            background-color: #fafafa;
-            font-family: 'Times New Roman', Times, serif;
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --light-bg: #d0e2f5;
+            --dark-bg: #343a40;
+            --text-color: #212529;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            padding: 2rem;
 
         }
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .recommendation-card {
+            border-radius: 8px;
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .recommendation-header {
+            padding: 15px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .recommendation-body {
+            padding: 15px;
+            background-color: white;
+        }
+
+        .recommendation-footer {
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button{
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            font-weight: bolder;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: var(--secondary-color);
+        }
     </style>
+    <title>Document</title>
 </head>
 <body>
     <h1>HTML Capstone Projects</h1>
-    <ul>
-        <li><a href="./Friendship-zone/index.html">Friendship Zone</a></li>
-        <li><a href="./AutoMob-Mechanic/home.html">AutoMob-Mechanic/a></li>
-    </ul>
+    <div id="recommendationsContent" class="recommendations-grid">
+        <div class="recommendation-card">
+            <div class="recommendation-header" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1559685473-cf26f795b963?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); ">
+                <h3>Friendship Zone</h3>
+            </div>
+            <div class="recommendation-body">
+                <h4>A Simple Website to Make Friends</h4>
+                <p>The goal of this project is to create a simple and neat website where people can register and keep a list of their
+                friends. It helps in learning how to build web pages using just HTML.</p>
+            </div>
+            <div class="recommendation-footer">
+                <a href="./Friendship-zone/index.html" target="_blank"><button class="btn" onclick="">View Live</button></a>
+            </div>
+        </div>
+        <div class="recommendation-card">
+            <div class="recommendation-header"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./Javascript/AutoMob-MechanicApp/images/Picture2.jpg');">
+                <h3>AutoMob-MechanicApp</h3>
+            </div>
+            <div class="recommendation-body">
+                <h4>A Car Service Web Application</h4>
+                <p>The aim of this project is to create a basic website for an automobile service center where users can view services,
+                book appointments, and get service-related information. It helps beginners learn how to structure multiple HTML pages
+                for a real-world use case.</p>
+            </div>
+            <div class="recommendation-footer">
+                <a href="./AutoMob-Mechanic/home.html" target="_blank"><button class="btn" onclick="">View Live</button></a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
+    
